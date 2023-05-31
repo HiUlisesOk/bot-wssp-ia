@@ -241,7 +241,7 @@ const flowRealPeople = addKeyword(['hola', 'hello', 'buenas', 'buen dia', 'Hola'
         try {
             const Response = verificarHorario(); // Llamado simulado a la API OPEN AI
             addItem('Un usuario ha interactuado con nuestro bot 🙋🏻‍♂️❤️')
-            if (false) {
+            if (Response) {
                 // El llamado a la API fue exitoso
                 return flowDynamic([{
                     body: `⌛ Aguarda un momento, pronto serás atendido por uno de nuestros representantes.`,
