@@ -18,7 +18,9 @@ vendor/
 # Ignorar archivos de configuración sensibles
 config.ini
 secrets.yml
+*.env
 .env
+env
 
 # Ignorar archivos de registro
 *.log
