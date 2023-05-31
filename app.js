@@ -51,7 +51,7 @@ const flowFormularioReintegros = addKeyword(['Combustible', 'Transporte Privado'
                     body: '❌ Su solicitud ha sido cancelada ❌',    // Aquí terminamos el flow si la condicion se comple
                     buttons: [{ body: '⬅️ Volver al Inicio' }]                      // Y además, añadimos un botón por si necesitas derivarlo a otro flow
                 })
-            imageUrl = await ctx?.message?.imageMessage?.mimetype || 'Not Valid Image'
+            // imageUrl = await ctx?.message?.imageMessage?.mimetype || 'Not Valid Image'
             console.log(imageUrl)
 
             const isValidFormat = isValidImageFormat(imageUrl);
