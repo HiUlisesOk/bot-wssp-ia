@@ -1,0 +1,32 @@
+# Ignorar archivos de compilación
+*.o
+*.out
+
+# Ignorar archivos generados por IDEs
+.vscode/
+.idea/
+
+# Ignorar archivos de dependencias o paquetes
+node_modules/
+vendor/
+
+# Ignorar archivos de compilación de lenguajes específicos
+*.class
+*.jar
+*.war
+
+# Ignorar archivos de configuración sensibles
+config.ini
+secrets.yml
+.env
+
+# Ignorar archivos de registro
+*.log
+logs/
+
+# Ignorar archivos de respaldo de texto
+*~
+
+# Ignorar archivos y directorios específicos
+myapp.conf
+temp/
