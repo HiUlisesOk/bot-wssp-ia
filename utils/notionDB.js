@@ -21,7 +21,7 @@ async function addItem(text) {
 				}
 			},
 		})
-		console.log(response)
+		// console.log(response)
 		console.log("Success! Entry added.")
 	} catch (error) {
 		console.error(error.body)

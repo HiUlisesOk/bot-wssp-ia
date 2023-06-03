@@ -8,17 +8,24 @@ const { validarDNI,
     validarFormatoFecha,
     validarLongitudMensaje,
     enviarSolicitudAI,
-    verificarHorario
-
+    verificarHorario,
+    generarCodigoSeguimiento,
 } = require('./utils/utils');
 
 const { addItem } = require('./utils/notionDB')
+const validator = require('validator');
+
+function validarEmail(email) {
+    return validator.isEmail(email);
+}
+
 
 let nombre;
 let dni;
 let imageUrl;
 let fecha;
 let message;
+let code;
 
 const flowOtro = addKeyword(['otro', 'ayuda', 'Continuar con Asistente Vitrual'])
     .addAnswer(`'🙌 Hola, bienvenido a soporte de *GBM*, por favor dime en que otro tipo de consultas puedo ayudarte:'`, { capture: true }, async (ctx, { flowDynamic }) => {
@@ -108,7 +115,37 @@ const flowFormularioReintegros = addKeyword(['Combustible', 'Transporte Privado'
             }
         }
     )
-    .addAnswer(`Espera un momento mientras validamos tu solicitud...`, null, async (ctx, { flowDynamic }) => {
+    .addAnswer(
+        ['¿Podrias ingresar tu email para mantenerte al tando de las novedades en tu solicitud?'],
+        { capture: true, buttons: [{ body: '❌ Cancelar solicitud' }, { body: '➡️ Necesito ayuda' }] },
+
+        async (ctx, { flowDynamic, endFlow }) => {
+            if (ctx.body == '❌ Cancelar solicitud')
+                return endFlow({
+                    body: '❌ Su solicitud ha sido cancelada ❌',
+                    buttons: [{ body: '⬅️ Volver al Inicio' }]
+
+
+                })
+            const email = ctx.body;
+            // Aquí puedes realizar la validación del correo electrónico si es necesario
+            validarEmail(email)
+
+            if (validarEmail(email)) {
+                // Generar un código de seguimiento 
+                code = generarCodigoSeguimiento();
+
+                // Enviar el código de seguimiento al correo electrónico del usuario 
+                addItem(email, code);
+                flowDynamic('✅ El email es válido.')
+            } else {
+                flowDynamic('⛔ El emai no es válido.')
+                return fallBack()
+            }
+            return flowDynamic([{ body: '✉️ Se ha enviado un correo electrónico con el código de seguimiento. Por favor, revisa tu bandeja de entrada.' }]);
+        }
+    )
+    .addAnswer(`Espera un momento mientras validamos tu solicitud...`, null, async (ctx, { flowDynamic, fallBack }) => {
         try {
             const apiResponse = await simulatedAPICall(dni); // Llamado simulado a la API
             if (apiResponse) {
@@ -240,7 +277,8 @@ const flowRealPeople = addKeyword(['hola', 'hello', 'buenas', 'buen dia', 'Hola'
     .addAnswer(`'🙌 Hola, bienvenido a soporte de *GBM*'`, null, async (ctx, { flowDynamic }) => {
         try {
             const Response = verificarHorario(); // Llamado simulado a la API OPEN AI
-            addItem('Un usuario ha interactuado con nuestro bot 🙋🏻‍♂️❤️')
+            addItem(ctx.pushName, ctx.body, ctx.from)
+
             if (Response) {
                 // El llamado a la API fue exitoso
                 return flowDynamic([{
@@ -260,15 +298,16 @@ const flowRealPeople = addKeyword(['hola', 'hello', 'buenas', 'buen dia', 'Hola'
         } catch (error) {
             // Ocurrió un error en el llamado a la API
             console.error('Error en el llamado a la API:', error);
-            return fallBack();
+
         }
     })
 
 
 
+
 const main = async () => {
     const adapterDB = new MockAdapter();
-    const adapterFlow = createFlow([flowPrincipal, flowRealPeople, flowReintegro, flowSearchDB, flowFormularioReintegros, flowOtro]);
+    const adapterFlow = createFlow([flowPrincipal, flowRealPeople, flowReintegro, flowSearchDB, flowFormularioReintegros, flowOtro,]);
     const adapterProvider = createProvider(BaileysProvider);
 
     createBot({

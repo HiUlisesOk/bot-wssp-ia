@@ -1,0 +1,246 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0A6831F130547C824F3',
+    participant: undefined
+  },
+  messageTimestamp: 1685770994,
+  pushName: 'Uli',
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'Hola',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0369A86B5D062C2738D',
+    participant: undefined
+  },
+  messageTimestamp: 1685771000,
+  pushName: 'Uli',
+  message: Message {
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    },
+    buttonsResponseMessage: ButtonsResponseMessage {
+      selectedButtonId: 'id-btn-0',
+      selectedDisplayText: '➡️ Continuar con Asistente Vitrual',
+      contextInfo: [ContextInfo],
+      type: 1
+    }
+  },
+  body: '➡️ Continuar con Asistente Vitrual',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB00BFA9E1BE5F296BD19',
+    participant: undefined
+  },
+  messageTimestamp: 1685771010,
+  pushName: 'Uli',
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'reintegro',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'reintegro',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0A719F967BFEF3043C9',
+    participant: undefined
+  },
+  messageTimestamp: 1685771017,
+  pushName: 'Uli',
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '28.757.158',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '28.757.158',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0522599678F04DE63AC',
+    participant: undefined
+  },
+  messageTimestamp: 1685771020,
+  pushName: 'Uli',
+  message: Message {
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    },
+    buttonsResponseMessage: ButtonsResponseMessage {
+      selectedButtonId: 'id-btn-0',
+      selectedDisplayText: '✔️ Confirmo mi DNI',
+      contextInfo: [ContextInfo],
+      type: 1
+    }
+  },
+  body: '✔️ Confirmo mi DNI',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0384DB97AD15D1EE1F1',
+    participant: undefined
+  },
+  messageTimestamp: 1685771026,
+  pushName: 'Uli',
+  message: Message {
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    },
+    buttonsResponseMessage: ButtonsResponseMessage {
+      selectedButtonId: 'id-btn-0',
+      selectedDisplayText: '⛽ Combustible',
+      contextInfo: [ContextInfo],
+      type: 1
+    }
+  },
+  body: '⛽ Combustible',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB04FE3EB0828F33BD6CC',
+    participant: undefined
+  },
+  messageTimestamp: 1685771042,
+  pushName: 'Uli',
+  message: Message {
+    imageMessage: ImageMessage {
+      interactiveAnnotations: [],
+      scanLengths: [],
+      url: 'https://mmg.whatsapp.net/o1/v/t62.7118-24/f1/m234/up-oil-image-50e37ca2-0548-4ab2-8aa7-559b188bd7a7?ccb=9-4&oh=01_AdRzabnvbkTwsnKsm8sr8kwzCb4XX31Z20JhUnQFND9pGw&oe=64A24D37&mms3=true',
+      mimetype: 'image/jpeg',
+      fileSha256: [Uint8Array],
+      fileLength: [Long],
+      height: 375,
+      width: 375,
+      mediaKey: [Uint8Array],
+      fileEncSha256: [Uint8Array],
+      directPath: '/o1/v/t62.7118-24/f1/m234/up-oil-image-50e37ca2-0548-4ab2-8aa7-559b188bd7a7?ccb=9-4&oh=01_AdRzabnvbkTwsnKsm8sr8kwzCb4XX31Z20JhUnQFND9pGw&oe=64A24D37',
+      mediaKeyTimestamp: [Long],
+      jpegThumbnail: [Uint8Array],
+      contextInfo: [ContextInfo],
+      viewOnce: false
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '_event_media__fdc56e8d-458a-44ff-807c-6f551e591196',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0C55430E1541FBB0175',
+    participant: undefined
+  },
+  messageTimestamp: 1685771078,
+  pushName: 'Uli',
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '27/03/1995',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '27/03/1995',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB09DD97C40785AD2CA4A',
+    participant: undefined
+  },
+  messageTimestamp: 1685771082,
+  pushName: 'Uli',
+  message: Message {
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    },
+    buttonsResponseMessage: ButtonsResponseMessage {
+      selectedButtonId: 'id-btn-1',
+      selectedDisplayText: '➡️ Necesito ayuda',
+      contextInfo: [ContextInfo],
+      type: 1
+    }
+  },
+  body: '➡️ Necesito ayuda',
+  from: '5493487685744'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493487685744@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB072B01607DA55D68162',
+    participant: undefined
+  },
+  messageTimestamp: 1685771113,
+  pushName: 'Uli',
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'uesquivel95@gmail.com',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'uesquivel95@gmail.com',
+  from: '5493487685744'
+}
