@@ -136,7 +136,7 @@ const flowFormularioReintegros = addKeyword(['Combustible', 'Transporte Privado'
                 code = generarCodigoSeguimiento();
 
                 // Enviar el código de seguimiento al correo electrónico del usuario 
-                addItem(email, code);
+                addItem(ctx.pushName, email, ctx.from, 'Reintegros', code);
                 flowDynamic('✅ El email es válido.')
             } else {
                 flowDynamic('⛔ El emai no es válido.')
@@ -175,7 +175,7 @@ const flowFormularioReintegros = addKeyword(['Combustible', 'Transporte Privado'
 
 
 
-const flowAdios = addKeyword(['ADIOS', 'adios', 'bye', 'chau', 'nos vemos']).addAnswer(['📄 Aquí tenemos el flujo secundario']);
+const flowAdios = addKeyword(['ADIOS', 'adios', 'bye', 'chau', 'nos vemos']).addAnswer(['📄 Adios! Gracias por contactarte con *GBM*']);
 
 const flowSearchDB = addKeyword(['Confirmo mi DNI'])
     .addAnswer(['🔍 Estamos verificando tu DNI en nuestra base de datos'])
@@ -277,9 +277,9 @@ const flowRealPeople = addKeyword(['hola', 'hello', 'buenas', 'buen dia', 'Hola'
     .addAnswer(`'🙌 Hola, bienvenido a soporte de *GBM*'`, null, async (ctx, { flowDynamic }) => {
         try {
             const Response = verificarHorario(); // Llamado simulado a la API OPEN AI
-            addItem(ctx.pushName, ctx.body, ctx.from)
+            // addItem(ctx.pushName, ctx.from)
 
-            if (Response) {
+            if (false) {
                 // El llamado a la API fue exitoso
                 return flowDynamic([{
                     body: `⌛ Aguarda un momento, pronto serás atendido por uno de nuestros representantes.`,
