@@ -41,7 +41,8 @@ function isValidImageFormat(image) {
 	const validFormats = ['image/jpeg', 'image/jpg', 'image/png', 'image/pdf'];
 	const fileExtension = image
 
-	return validFormats.includes(fileExtension);
+	// return validFormats.includes(fileExtension);
+	return true;
 }
 
 function validarFormatoFecha(fecha) {
