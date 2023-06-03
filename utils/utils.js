@@ -47,7 +47,7 @@ function isValidImageFormat(image) {
 function validarFormatoFecha(fecha) {
 	const regex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
 	if (!regex.test(fecha)) {
-		return false; // El formato no coincide
+		return true; // El formato no coincide
 	}
 
 	const partes = fecha.split('/');
